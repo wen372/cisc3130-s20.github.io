@@ -1,0 +1,251 @@
+#+TITLE:     CISC 3130 Assignments
+#+AUTHOR:    Katherine Chuang
+#+EMAIL:     chuang@sci.brooklyn.cuny.edu
+#+UNIVERSITY: Brooklyn College
+#+DEPARTMENT: Department of CIS
+#+DATE:      2020-01-27
+#+DESCRIPTION: Describe assignments for the class. Course notes at http://libguides.brooklyn.cuny.edu/cisc3130
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:n toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+HTML_HEAD: <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
+#+HTML_HEAD: <link href="spec-style.css" rel="stylesheet" type="text/css" />
+
+* Tentative Due Dates
+
+This section to summarize the links to submit assignments.
+
+#+HTML: <div style="width:600px;text-align:left;">
+| *Assignment* | Due Date  | Link |
+|--------------+-----------+------|
+| =[A1]=       | 2/20/2020 |      |
+| =[A2]=       | 3/5/2020  |      |
+| =[A3]=       | 3/19/2020 |      |
+| =[A4]=       | 4/2/2020  |      |
+| =[A5]=       | 4/30/2020 |      |
+#+HTML: </div>
+
+
+
+* Objective
+
+Take home assignments are opportunities to enhance the concepts and theories we cover in class in a more tangible way. You would find the most value of these assignments if you treat them with the seriousness as if you were employed but a VIP client, albeit with obscure and outdated data processing needs.
+
+Assignments are structured as if you were hired on as a developer in training.
+
+** Your Role
+
+Imagine you are the developer and manager hh
+on a team of one. This means that you are solely responsible for delivering your code on time, and. That the code you produce you are
+ proud of owning. All the tasks are specified in advance so that you can schedule time to complete them in your own time.
+
+All the assignments boil down to an essence with very similar work flow:
+
+- Read in a text file provided
+- Process text file as needed by the task requirements
+- Output as specified by the assignment requirements
+- Submit the code to the form by the due date
+
+The project tasks are scoped to be bite sized pieces of much more full-fledged programming projects for large companies, which go through the steps to extract, transform, and load (ETL) data into databases.
+
+While full time professions might work with gigabytes or terabytes of data at a time, in this class we will limit data sizes of 1MB or smaller text files per assignment. That being said, we will not be concerned with transforming data from one product to another. We will just be using Java programs to convert data from unstructured to structured data.
+
+Each of the assignments can be completed within an afternoon by an experienced programmer who has grasped the fundamentals of data structure concepts. Since you are learning the data structures this semester, you will likely need more than a couple of hours so the assignments are scheduled such that you have approximately two weeks of time to focus on each.
+
+** Technology requirements
+
+ - Your text editor/IDE of choice. I mainly use vim or emacs text editor [fn:1]
+ - Your version control system (VCS) of choice. I mainly use git and github [fn:2]
+ - Internet connection to submit the assignment by the due date
+ - Might add more later
+
+** Grading Rubric
+
+The assignments will be graded on a scale of /strong effort/ and /weak effort/. Late assignments means submitting any time after the specified due date, and will limited to score of one regardless of the level of effort. Not turning in on time will be given a score of zero. Late assignments will be accepted until the close of business on 4/30/2020 All assignments combined are 20% of your final grade.
+
+Weak effort looks like someone who rushed to get the work done. For example,
+
+- Met most of specs but didn't check carefully over their work.
+- Noticeable amount of typos, and grammar mistakes.
+- Hard to read code, which might be a result of messy code or lacking comments to make it more readable.
+
+Strong effort exhibits work that surpasses weak effort, such as:
+
+- Neatly presented, tidy code base and well documented code (maintainable code)
+- Relatively easy to tell what was being done and how (documented code)
+- Goes above and beyond what is explicitly stated
+
+While you may discuss your work with class colleagues, submit your own work. Each task comes with specific requirements. Part of your "job" is be able to analyze what's being asked beyond the obvious.
+
+* General Advice
+
+Here are some general advice related to working through programming assignments.
+
+** The Act of Problem Solving
+
+Programming is not just about the syntax of programming languages. It might have been the focus of your previous CS courses, however as you progress in your tech careers it becomes a small part of a larger scope of your skills.  Computer science as a field is about solving problems, and computing the solution(s). You'll hear many versions of this thing about solving problems. Great computer scientists are great problem solvers.
+
+Programming is about solving problems. You have to understand the problem before you can solve it adequately. You have to understand how to break down the problem into operational steps before you can tell a computer the steps.
+
+Before you begin coding, think about the problem. Reading comprehension skills matter. Think about why you might have been suggested to use that data structure. Ability to be a thinker - to analytically and critically think about problems and solutions - is what separate the amazing and okay tech professionals and what helps determine the prevalence and longevity of your career prospects in any field.
+
+For instance, you might want to ask yourself for each assignment, /"What are the advantages and disadvantages of using that data structure? What features come with this data structure to make it the best choice for this problem?"/ Read relevant material, discuss with class colleagues as necessary to solidify your understanding.
+
+As you code, it helps to be conscious and actively engaged in the activity. Programming involves you to be aware of your state of mind.
+
+** Great code reads like great pose
+
+Great code is succinct, expressive, and clear the first time you read it. It tries to guide the reader through transitional steps. It aims for functions with a single main idea. Great code is clean, maintainable code.
+
+** Following spec
+
+When you submit your assignment, check carefully the description and the items that should be submitted, and exact formatting of such. These are the /specifications/ for the assignment, and for the rest of the document referred to as "spec". Please be kind to your future self by treating these take home assignments with the same rigor as you would with future employment, in order to practice the skill of adhering to spec.
+
+- Do your best to meet the specs.
+- Ensure that the code compiles and works
+- Ensure that you meet the “business logic” conditions that were specified work
+- Files asked for are in the item turned in
+
+Note that in life by nature of reality and one's discernment abilities, some specs will be obvious, some will be less obvious. Take the opportunity to practice developing the ability to deduce the not stated.
+
+** Other Tips
+*** Don't procrastinate.
+Very few developers figure out the code in one sitting. Schedule your work in chunks. Some common chunks:
+**** summarizing the requirements for the task and plausible test conditions to ensure the requirements are met
+****  thinking about the methods and classes needed and how data flows to each other
+****  writing the code
+**** testing code to see if it matches test conditions
+**** preparing the submission
+*** Be organized.
+Being organized helps a lot. Organizational skills is the bread and butter of data structures (the bread and butter of computer science).
+*** Persist.
+Don’t give up immediately if you can’t get figure out the error error. Systematically try and try again. Make notes for yourself on what didn’t work, your hypotheses, and also what worked. This can include retracing your code line by line, searching the internet, chatting with someone.
+*** Find the tools that work for you.
+Recommended workflow for assignments using linux/unix flavored tools will be explained early on in the semester just to cover briefly one way to complete the assignments. Treat that as a senior developer passing on some advice. You don't have to use the proposed set of tools.
+*** Developing fluency.
+Some of you may be more comfortable with what the assignments are asking. Some may be less comfortable. If you’re on the less comfortable side, please make sure to read any suggested reading material. You may ask me for help however note that when you ask for my support, I will ask you what you’ve read and tried to start off discussion.
+
+
+- We are going to use the department official language, Java 8, for most of the course.
+- You're welcome to explore practicing with other programming languages and submit with other languages. You will get credit for work in another language so long as your submission includes a write up explaining why you chose that language over languages. "I don't like programming in the Object Oriented Paradigm" is perfectly fine, if you can give more reasons comparing advantages and disadvantages of features that would be better. Length should be what could constitute as "a long email".
+
+
+
+* Project template
+
+When there are multiple waves of similar work to be done for multiple projects, a developer might prepare a standard example of a "core" set of files to reference or reuse. Since the project assignments all require reading in an input text file, I've prepared an example that could potentially be used.
+
+You may create your own /template/ or use the one provided. When you create your own, strive to make files and code easy to find, and easy to read. Think about how you want to organize your files. Do you want one repository per assignment? All assignments in one repository, with different subfolders? Or would you prefer different Java files? There are pros and cons to each design choice, and picking one can sometimes be based on subjective choice.
+
+** Motivations
+
+The prepared code repository aims to show a reasonably good sample, with meeting the following conditions.
+
+- Demonstrates an example of generally good file organization practices, and
+- Demonstrates an example of organized easy to read code, and
+- Provides sample code to show students how to read from text files, and
+- Serves as a baseline for showing students language fluency level needed as prerequisite for the course.
+
+** Where to find it
+
+The link to the repository is: https://github.com/cisc3130-s20/assignment-template
+
+There is a GitHub organization for this semester named *~CISC3130-s20~*.
+
+* The Tasks
+
+Descriptions for each assignment is given below.
+
+** Top Streaming Music Artists
+
+A record label executive received text files that contain the top streamed music artists on Spotify for certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times.
+
+In order for their in house IT to be able to process the information, they need someone to help process it.
+
+****  *Who appears on the top streamed list?*
+
+ First, the exec wants to know which artists appears on the list and how many times they appear. Prepare an output file with contents of your nested array so that the record label executive can see this report.
+
+- Data Extract 1 to be linked
+- Data Extract 2 to be linked
+
+Not knowing data structures yet, it seems the way to proceed quickly at building is with Java arrays. Read in the text file and then save the ~CSV~ file format into a nested Java array like ~myList~ below. If an artist appears multiple times, then that artist probably should only appear once in your nested array.
+
+ #+NAME: NestedArray
+ #+BEGIN_SRC java
+ /* Java nested array syntax */
+
+ int cols = 4;  // arbitrary number represents columns to create
+ int rows = 10; // arbitrary number represents rows to create;
+ String[][] myList = new String[rows][cols];
+
+ int[][] arr = { { 1, 2 }, { 3, 4 } };
+ System.out.println("arr[0][0] = " + arr[0][0]);
+ #+END_SRC
+
+Will you limit to just the artist name? Perhaps you should discuss your decision with your class colleagues.
+
+**** *Can we get a sorted order of artist names?*
+
+It just so happens that this imaginary VIP client has a thing for alphabetized lists and wants to see the artist names in alphabetical order. Since you learned about linked lists in class, you should know how to create one.
+
+You can probably take the array from part 1, which is hopefully a truncated version of the raw data, and insert artist names into a sorted linked list.
+
+You may use the example classes below to start with to design a sorted list of ~TopStreamingArtists~. You may also create your own classes. The classes work like templates because they offer a blueprint, where you can reuse the object oriented structure by creating objects from those classes.
+
+ #+NAME: TopHits
+ #+BEGIN_SRC java
+
+ class Artist {
+    private String name;
+    private Artist next;
+   // add constructors
+ }
+
+ class TopStreamingArtists {
+    private Artist first;
+    public void TopHits(){
+      first = null;
+    }
+    public boolean isEmpty(){
+     return (first == null);
+    }
+ }
+ #+END_SRC
+
+Using the linked list structure you've designed and created, you can resume with the data processing in order to provide another report to the  insert an artist name to the ~TopStreamingArtists~ linked list.
+
+ #+NAME: TopHitsObject
+ #+BEGIN_SRC java
+ public static void main(String [ ] args) {
+     TopStreamingArtists artistNames = new TopStreamingArtists();
+     artistNames.insert("Stage Name");
+     artistNames.displayList();
+ }
+ #+END_SRC
+
+Make sure to print out the report for the exec showing the data in ascending order by Artist name.
+
+
+
+*** Where to Submit:
+
+Please fill out this _form_ (link not yet available)
+
+What you should submit is a link to where your code repository is located. Your code repository should have the elements described in the project template section. It should also match the items asked for in parts 1 and 2 above.
+
+
+
+* Footnotes
+
+[fn:1] I am unfamiliar with most IDEs and will. More than likely not be a good resource for helping you through IDE issues. Please find a class colleague to help you.
+[fn:2] Git is an open source version control system. Some information summarized on the [[https://libguides.brooklyn.cuny.edu/c.php?g=986722&p=7152056][OER course page]]
+
+
+#+HTML:<div>
+Last updated by {{{time(%Y-%m-%d %H:%M:%S)}}} {{{author}}} ({{{email}}})
+#+HTML:</div>

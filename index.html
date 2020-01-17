@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-01-17 Fri 17:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CISC 3130 Assignments</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Katherine Chuang" />
+<meta name="description" content="Describe assignments for the class. Course notes at http://libguides.brooklyn.cuny.edu/cisc3130"
+ />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
+<link href="spec-style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">CISC 3130 Assignments</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8195852">1. Tentative Due Dates</a></li>
+<li><a href="#org0e7f25e">2. Objective:</a>
+<ul>
+<li><a href="#org14d8e35">2.1. Your Role</a></li>
+<li><a href="#org1dec503">2.2. Technology requirements</a></li>
+<li><a href="#orgef35fd2">2.3. Grading Rubric</a></li>
+</ul>
+</li>
+<li><a href="#orge940c35">3. General Advice:</a>
+<ul>
+<li><a href="#orgaa34ae8">3.1. The Act of Problem Solving</a></li>
+<li><a href="#orgd48443c">3.2. Great code reads like great pose</a></li>
+<li><a href="#org8c4c2b8">3.3. Following spec</a></li>
+<li><a href="#org02af03b">3.4. Other Tips</a>
+<ul>
+<li><a href="#org59f010a">3.4.1. Don't procrastinate.</a></li>
+<li><a href="#org1ba8609">3.4.2. Be organized.</a></li>
+<li><a href="#org0532539">3.4.3. Persist.</a></li>
+<li><a href="#orgc425ef3">3.4.4. Find the tools that work for you.</a></li>
+<li><a href="#org075221b">3.4.5. Developing fluency.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org68583b9">4. Project template</a>
+<ul>
+<li><a href="#org42595d6">4.1. Motivations</a></li>
+<li><a href="#org7026cdd">4.2. Where to find it</a></li>
+</ul>
+</li>
+<li><a href="#org3446ba7">5. The Tasks</a>
+<ul>
+<li><a href="#org6ea6b01">5.1. Top Streaming Music Artists</a>
+<ul>
+<li><a href="#org7bea7e2">5.1.1. Where to Submit:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8195852" class="outline-2">
+<h2 id="org8195852"><span class="section-number-2">1</span> Tentative Due Dates</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This section to summarize the links to submit assignments.
+</p>
+
+<div style="width:600px;text-align:left;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Assignment</b></th>
+<th scope="col" class="org-left">Due Date</th>
+<th scope="col" class="org-left">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>[A1]</code></td>
+<td class="org-left">2/20/2020</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[A2]</code></td>
+<td class="org-left">3/5/2020</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[A3]</code></td>
+<td class="org-left">3/19/2020</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[A4]</code></td>
+<td class="org-left">4/2/2020</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[A5]</code></td>
+<td class="org-left">4/30/2020</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org0e7f25e" class="outline-2">
+<h2 id="org0e7f25e"><span class="section-number-2">2</span> Objective:</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Take home assignments are opportunities to enhance the concepts and theories we cover in class in a more tangible way. You would find the most value of these assignments if you treat them with the seriousness as if you were employed but a VIP client, albeit with obscure and outdated data processing needs.
+</p>
+
+<p>
+Assignments are structured as if you were hired on as a developer in training.
+</p>
+</div>
+
+<div id="outline-container-org14d8e35" class="outline-3">
+<h3 id="org14d8e35"><span class="section-number-3">2.1</span> Your Role</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Imagine you are the developer and manager hh
+on a team of one. This means that you are solely responsible for delivering your code on time, and. That the code you produce you are
+ proud of owning. All the tasks are specified in advance so that you can schedule time to complete them in your own time.
+</p>
+
+<p>
+All the assignments boil down to an essence with very similar work flow:
+</p>
+
+<ul class="org-ul">
+<li>Read in a text file provided</li>
+<li>Process text file as needed by the task requirements</li>
+<li>Output as specified by the assignment requirements</li>
+<li>Submit the code to the form by the due date</li>
+</ul>
+
+<p>
+The project tasks are scoped to be bite sized pieces of much more full-fledged programming projects for large companies, which go through the steps to extract, transform, and load (ETL) data into databases.
+</p>
+
+<p>
+While full time professions might work with gigabytes or terabytes of data at a time, in this class we will limit data sizes of 1MB or smaller text files per assignment. That being said, we will not be concerned with transforming data from one product to another. We will just be using Java programs to convert data from unstructured to structured data.
+</p>
+
+<p>
+Each of the assignments can be completed within an afternoon by an experienced programmer who has grasped the fundamentals of data structure concepts. Since you are learning the data structures this semester, you will likely need more than a couple of hours so the assignments are scheduled such that you have approximately two weeks of time to focus on each.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1dec503" class="outline-3">
+<h3 id="org1dec503"><span class="section-number-3">2.2</span> Technology requirements</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Your text editor/IDE of choice. I mainly use vim or emacs text editor <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup></li>
+<li>Your version control system (VCS) of choice. I mainly use git and github <sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup></li>
+<li>Internet connection to submit the assignment by the due date</li>
+<li>Might add more later</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgef35fd2" class="outline-3">
+<h3 id="orgef35fd2"><span class="section-number-3">2.3</span> Grading Rubric</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+The assignments will be graded on a scale of <i>strong effort</i> and <i>weak effort</i>. Late assignments means submitting any time after the specified due date, and will limited to score of one regardless of the level of effort. Not turning in on time will be given a score of zero. Late assignments will be accepted until the close of business on 4/30/2020 All assignments combined are 20% of your final grade.
+</p>
+
+<p>
+Weak effort looks like someone who rushed to get the work done. For example,
+</p>
+
+<ul class="org-ul">
+<li>Met most of specs but didn't check carefully over their work.</li>
+<li>Noticeable amount of typos, and grammar mistakes.</li>
+<li>Hard to read code, which might be a result of messy code or lacking comments to make it more readable.</li>
+</ul>
+
+<p>
+Strong effort exhibits work that surpasses weak effort, such as:
+</p>
+
+<ul class="org-ul">
+<li>Neatly presented, tidy code base and well documented code (maintainable code)</li>
+<li>Relatively easy to tell what was being done and how (documented code)</li>
+<li>Goes above and beyond what is explicitly stated</li>
+</ul>
+
+<p>
+While you may discuss your work with class colleagues, submit your own work. Each task comes with specific requirements. Part of your "job" is be able to analyze what's being asked beyond the obvious.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge940c35" class="outline-2">
+<h2 id="orge940c35"><span class="section-number-2">3</span> General Advice:</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Here are some general advice related to working through programming assignments.
+</p>
+</div>
+
+<div id="outline-container-orgaa34ae8" class="outline-3">
+<h3 id="orgaa34ae8"><span class="section-number-3">3.1</span> The Act of Problem Solving</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Programming is not just about the syntax of programming languages. It might have been the focus of your previous CS courses, however as you progress in your tech careers it becomes a small part of a larger scope of your skills.  Computer science as a field is about solving problems, and computing the solution(s). You'll hear many versions of this thing about solving problems. Great computer scientists are great problem solvers.
+</p>
+
+<p>
+Programming is about solving problems. You have to understand the problem before you can solve it adequately. You have to understand how to break down the problem into operational steps before you can tell a computer the steps.
+</p>
+
+<p>
+Before you begin coding, think about the problem. Reading comprehension skills matter. Think about why you might have been suggested to use that data structure. Ability to be a thinker - to analytically and critically think about problems and solutions - is what separate the amazing and okay tech professionals and what helps determine the prevalence and longevity of your career prospects in any field.
+</p>
+
+<p>
+For instance, you might want to ask yourself for each assignment, <i>"What are the advantages and disadvantages of using that data structure? What features come with this data structure to make it the best choice for this problem?"</i> Read relevant material, discuss with class colleagues as necessary to solidify your understanding.
+</p>
+
+<p>
+As you code, it helps to be conscious and actively engaged in the activity. Programming involves you to be aware of your state of mind.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd48443c" class="outline-3">
+<h3 id="orgd48443c"><span class="section-number-3">3.2</span> Great code reads like great pose</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Great code is succinct, expressive, and clear the first time you read it. It tries to guide the reader through transitional steps. It aims for functions with a single main idea. Great code is clean, maintainable code.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c4c2b8" class="outline-3">
+<h3 id="org8c4c2b8"><span class="section-number-3">3.3</span> Following spec</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+When you submit your assignment, check carefully the description and the items that should be submitted, and exact formatting of such. These are the <i>specifications</i> for the assignment, and for the rest of the document referred to as "spec". Please be kind to your future self by treating these take home assignments with the same rigor as you would with future employment, in order to practice the skill of adhering to spec.
+</p>
+
+<ul class="org-ul">
+<li>Do your best to meet the specs.</li>
+<li>Ensure that the code compiles and works</li>
+<li>Ensure that you meet the “business logic” conditions that were specified work</li>
+<li>Files asked for are in the item turned in</li>
+</ul>
+
+<p>
+Note that in life by nature of reality and one's discernment abilities, some specs will be obvious, some will be less obvious. Take the opportunity to practice developing the ability to deduce the not stated.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02af03b" class="outline-3">
+<h3 id="org02af03b"><span class="section-number-3">3.4</span> Other Tips</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org59f010a" class="outline-4">
+<h4 id="org59f010a"><span class="section-number-4">3.4.1</span> Don't procrastinate.</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+Very few developers figure out the code in one sitting. Schedule your work in chunks. Some common chunks:
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgb90fff8"></a>summarizing the requirements for the task and plausible test conditions to ensure the requirements are met<br /></li>
+<li><a id="org3ee5a71"></a>thinking about the methods and classes needed and how data flows to each other<br /></li>
+<li><a id="org9bbb733"></a>writing the code<br /></li>
+<li><a id="org13e9aa9"></a>testing code to see if it matches test conditions<br /></li>
+<li><a id="orgb2145c0"></a>preparing the submission<br /></li>
+</ol>
+</div>
+<div id="outline-container-org1ba8609" class="outline-4">
+<h4 id="org1ba8609"><span class="section-number-4">3.4.2</span> Be organized.</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+Being organized helps a lot. Organizational skills is the bread and butter of data structures (the bread and butter of computer science).
+</p>
+</div>
+</div>
+<div id="outline-container-org0532539" class="outline-4">
+<h4 id="org0532539"><span class="section-number-4">3.4.3</span> Persist.</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<p>
+Don’t give up immediately if you can’t get figure out the error error. Systematically try and try again. Make notes for yourself on what didn’t work, your hypotheses, and also what worked. This can include retracing your code line by line, searching the internet, chatting with someone.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc425ef3" class="outline-4">
+<h4 id="orgc425ef3"><span class="section-number-4">3.4.4</span> Find the tools that work for you.</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<p>
+Recommended workflow for assignments using linux/unix flavored tools will be explained early on in the semester just to cover briefly one way to complete the assignments. Treat that as a senior developer passing on some advice. You don't have to use the proposed set of tools.
+</p>
+</div>
+</div>
+<div id="outline-container-org075221b" class="outline-4">
+<h4 id="org075221b"><span class="section-number-4">3.4.5</span> Developing fluency.</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<p>
+Some of you may be more comfortable with what the assignments are asking. Some may be less comfortable. If you’re on the less comfortable side, please make sure to read any suggested reading material. You may ask me for help however note that when you ask for my support, I will ask you what you’ve read and tried to start off discussion.
+</p>
+
+
+<ul class="org-ul">
+<li>We are going to use the department official language, Java 8, for most of the course.</li>
+<li>You're welcome to explore practicing with other programming languages and submit with other languages. You will get credit for work in another language so long as your submission includes a write up explaining why you chose that language over languages. "I don't like programming in the Object Oriented Paradigm" is perfectly fine, if you can give more reasons comparing advantages and disadvantages of features that would be better. Length should be what could constitute as "a long email".</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org68583b9" class="outline-2">
+<h2 id="org68583b9"><span class="section-number-2">4</span> Project template</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+When there are multiple waves of similar work to be done for multiple projects, a developer might prepare a standard example of a "core" set of files to reference or reuse. Since the project assignments all require reading in an input text file, I've prepared an example that could potentially be used.
+</p>
+
+<p>
+You may create your own <i>template</i> or use the one provided. When you create your own, strive to make files and code easy to find, and easy to read. Think about how you want to organize your files. Do you want one repository per assignment? All assignments in one repository, with different subfolders? Or would you prefer different Java files? There are pros and cons to each design choice, and picking one can sometimes be based on subjective choice.
+</p>
+</div>
+
+<div id="outline-container-org42595d6" class="outline-3">
+<h3 id="org42595d6"><span class="section-number-3">4.1</span> Motivations</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+The prepared code repository aims to show a reasonably good sample, with meeting the following conditions.
+</p>
+
+<ul class="org-ul">
+<li>Demonstrates an example of generally good file organization practices, and</li>
+<li>Demonstrates an example of organized easy to read code, and</li>
+<li>Provides sample code to show students how to read from text files, and</li>
+<li>Serves as a baseline for showing students language fluency level needed as prerequisite for the course.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7026cdd" class="outline-3">
+<h3 id="org7026cdd"><span class="section-number-3">4.2</span> Where to find it</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+The link to the repository is: <a href="https://github.com/cisc3130-s20/assignment-template">https://github.com/cisc3130-s20/assignment-template</a>
+</p>
+
+<p>
+There is a GitHub organization for this semester named <b><code>CISC3130-s20</code></b>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3446ba7" class="outline-2">
+<h2 id="org3446ba7"><span class="section-number-2">5</span> The Tasks</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Descriptions for each assignment is given below.
+</p>
+</div>
+
+<div id="outline-container-org6ea6b01" class="outline-3">
+<h3 id="org6ea6b01"><span class="section-number-3">5.1</span> Top Streaming Music Artists</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+A record label executive received text files that contain the top streamed music artists on Spotify for certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times.
+</p>
+
+<p>
+In order for their in house IT to be able to process the information, they need someone to help process it.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org5cfee6d"></a><b>Who appears on the top streamed list?</b><br />
+<div class="outline-text-5" id="text-5-1-0-1">
+<p>
+First, the exec wants to know which artists appears on the list and how many times they appear. Prepare an output file with contents of your nested array so that the record label executive can see this report.
+</p>
+
+<ul class="org-ul">
+<li>Data Extract 1 to be linked</li>
+<li>Data Extract 2 to be linked</li>
+</ul>
+
+<p>
+Not knowing data structures yet, it seems the way to proceed quickly at building is with Java arrays. Read in the text file and then save the <code>CSV</code> file format into a nested Java array like <code>myList</code> below. If an artist appears multiple times, then that artist probably should only appear once in your nested array.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java" id="orgeae484b"><span style="color: #2aa1ae;">/* Java nested array syntax */</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">cols</span> = <span style="color: #a45bad;">4</span>;  <span style="color: #2aa1ae;">// arbitrary number represents columns to create</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">rows</span> = <span style="color: #a45bad;">10</span>; <span style="color: #2aa1ae;">// arbitrary number represents rows to create;</span>
+<span style="color: #ce537a; font-weight: bold;">String</span><span style="color: #4f97d7;">[][]</span> <span style="color: #7590db;">myList</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">String</span><span style="color: #4f97d7;">[</span>rows<span style="color: #4f97d7;">][</span>cols<span style="color: #4f97d7;">]</span>;
+
+<span style="color: #ce537a; font-weight: bold;">int</span><span style="color: #4f97d7;">[][]</span> <span style="color: #7590db;">arr</span> = <span style="color: #4f97d7;">{</span> <span style="color: #bc6ec5;">{</span> <span style="color: #a45bad;">1</span>, <span style="color: #a45bad;">2</span> <span style="color: #bc6ec5;">}</span>, <span style="color: #bc6ec5;">{</span> <span style="color: #a45bad;">3</span>, <span style="color: #a45bad;">4</span> <span style="color: #bc6ec5;">}</span> <span style="color: #4f97d7;">}</span>;
+System.out.println<span style="color: #4f97d7;">(</span><span style="color: #2d9574;">"arr[0][0] = "</span> + arr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">][</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span><span style="color: #4f97d7;">)</span>;
+</pre>
+</div>
+
+<p>
+Will you limit to just the artist name? Perhaps you should discuss your decision with your class colleagues.
+</p>
+</div>
+</li>
+
+<li><a id="org3544331"></a><b>Can we get a sorted order of artist names?</b><br />
+<div class="outline-text-5" id="text-5-1-0-2">
+<p>
+It just so happens that this imaginary VIP client has a thing for alphabetized lists and wants to see the artist names in alphabetical order. Since you learned about linked lists in class, you should know how to create one.
+</p>
+
+<p>
+You can probably take the array from part 1, which is hopefully a truncated version of the raw data, and insert artist names into a sorted linked list.
+</p>
+
+<p>
+You may use the example classes below to start with to design a sorted list of <code>TopStreamingArtists</code>. You may also create your own classes. The classes work like templates because they offer a blueprint, where you can reuse the object oriented structure by creating objects from those classes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java" id="orga0e0d65">
+<span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #4f97d7;">{</span>
+   <span style="color: #4f97d7; font-weight: bold;">private</span> <span style="color: #ce537a; font-weight: bold;">String</span> <span style="color: #7590db;">name</span>;
+   <span style="color: #4f97d7; font-weight: bold;">private</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #7590db;">next</span>;
+  <span style="color: #2aa1ae;">// add constructors</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">TopStreamingArtists</span> <span style="color: #4f97d7;">{</span>
+   <span style="color: #4f97d7; font-weight: bold;">private</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #7590db;">first</span>;
+   <span style="color: #4f97d7; font-weight: bold;">public</span> <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">TopHits</span><span style="color: #bc6ec5;">(){</span>
+     first = <span style="color: #a45bad;">null</span>;
+   <span style="color: #bc6ec5;">}</span>
+   <span style="color: #4f97d7; font-weight: bold;">public</span> <span style="color: #ce537a; font-weight: bold;">boolean</span> <span style="color: #bc6ec5; font-weight: bold;">isEmpty</span><span style="color: #bc6ec5;">(){</span>
+    <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #2d9574;">(</span>first == <span style="color: #a45bad;">null</span><span style="color: #2d9574;">)</span>;
+   <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+<p>
+Using the linked list structure you've designed and created, you can resume with the data processing in order to provide another report to the  insert an artist name to the <code>TopStreamingArtists</code> linked list.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java" id="org13ba43b"><span style="color: #4f97d7; font-weight: bold;">public</span> <span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">String</span> <span style="color: #bc6ec5;">[</span> <span style="color: #bc6ec5;">]</span> <span style="color: #7590db;">args</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+    <span style="color: #ce537a; font-weight: bold;">TopStreamingArtists</span> <span style="color: #7590db;">artistNames</span> = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">TopStreamingArtists</span><span style="color: #bc6ec5;">()</span>;
+    artistNames.insert<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"Stage Name"</span><span style="color: #bc6ec5;">)</span>;
+    artistNames.displayList<span style="color: #bc6ec5;">()</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+<p>
+Make sure to print out the report for the exec showing the data in ascending order by Artist name.
+</p>
+</div>
+</li>
+</ol>
+
+
+
+<div id="outline-container-org7bea7e2" class="outline-4">
+<h4 id="org7bea7e2"><span class="section-number-4">5.1.1</span> Where to Submit:</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+Please fill out this <span class="underline">form</span> (link not yet available)
+</p>
+
+<p>
+What you should submit is a link to where your code repository is located. Your code repository should have the elements described in the project template section. It should also match the items asked for in parts 1 and 2 above.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+I am unfamiliar with most IDEs and will. More than likely not be a good resource for helping you through IDE issues. Please find a class colleague to help you.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Git is an open source version control system. Some information summarized on the <a href="https://libguides.brooklyn.cuny.edu/c.php?g=986722&amp;p=7152056">OER course page</a>
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: 2020-01-27</p>
+<p class="author">Author: Katherine Chuang</p>
+<p class="date">Created: 2020-01-17 Fri 17:48</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
