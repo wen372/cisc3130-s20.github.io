@@ -8,6 +8,8 @@
 #+DESCRIPTION: Describe assignments for the class. Course notes at http://libguides.brooklyn.cuny.edu/cisc3130
 #+KEYWORDS:
 #+LANGUAGE:  en
+#+TODO: TODO(t) | DONE(d)
+#+TODO: MISSING(nil) OPTIONAL(o) | UPDATED(u)
 #+OPTIONS:   H:3 num:n toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
@@ -16,27 +18,28 @@
 #+HTML_HEAD: <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
 #+HTML_HEAD: <link href="spec-style.css" rel="stylesheet" type="text/css" />
 
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: Neo-Euler
+#+HTML_MATHJAX: cancel.js noErrors.js
+
 #+HTML:
 #+HTML: <div class="outline-2" id="meta" style="font-size:12px">
 *Author:* {{{author}}} ({{{email}}}) \\
 *Last updated:* {{{time(%Y-%m-%d %H:%M:%S)}}}
 #+HTML: </div>
 
-* Tentative Due Dates
+* Assignment Due Dates
 
 This section to summarize the links to submit assignments.
 
 #+HTML: <div style="width:550px;text-align:left;">
-| *Assignment* | Due Date  | Link |
-|--------------+-----------+------|
-| =[A1]=       | 2/20/2020 |      |
-| =[A2]=       | 3/5/2020  |      |
-| =[A3]=       | 3/19/2020 |      |
-| =[A4]=       | 4/2/2020  |      |
-| =[A5]=       | 4/30/2020 |      |
+| *Assignment*                                | Due Date  | Link |
+|---------------------------------------------+-----------+------|
+| =[A1]= [[#a1][Top Streaming Music Artists]] | 2/20/2020 |      |
+| =[A2]= [[#a2][Music Playlist]]              | 3/5/2020  |      |
+| =[A3]= [[#a3][Assignment 3]]                | 3/19/2020 |      |
+| =[A4]= [[#a4][Assignment 4]]                | 4/2/2020  |      |
+| =[A5]= [[#a5][Assignment 5]]                | 4/30/2020 |      |
 #+HTML: </div>
-
-
 
 * Objective
 
@@ -104,7 +107,7 @@ For instance, you might want to ask yourself for each assignment, /"What are the
 
 As you code, it helps to be conscious and actively engaged in the activity. Programming involves you to be aware of your state of mind.
 
-** Great code reads like great pose
+** Great code is great pose
 
 Great code is succinct, expressive, and clear the first time you read it. It tries to guide the reader through transitional steps. It aims for functions with a single main idea. Great code is clean, maintainable code.
 
@@ -167,18 +170,41 @@ There is a GitHub organization for this semester named *~CISC3130-s20~*.
 
 Descriptions for each assignment is given below.
 
-** [A1] Top Streaming Music Artists
+** [A1] Top Streaming Artists
+:PROPERTIES:
+:CUSTOM_ID: a1
+:FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLScoTdzWI9jpKVkvAejzHfDfUoDf1rFd931S-ei2puA6zZbBzg/viewform
+:END:
 
-A record label executive received text files that contain the top streamed music artists on Spotify for certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times.
+*** Problem Description:
+A record label executive received text files that contain the top streamed music artists during certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times. The data comes from [[https://spotifycharts.com/][Spotify Charts]].
 
 In order for their in house IT to be able to process the information, they need someone to help process it.
+
+Each text file is a comma separated value (CSV) file that has a few columns like the following table [fn:3]:
+
+| Position | Track Name                                    | Artist                    | Streams | URL |
+|----------+-----------------------------------------------+---------------------------+---------+-----|
+|        1 | One Dance                                     | Drake, WizKid, Kyla       |     100 | ... |
+|        2 | Lean On                                       | Major Lazer, MØ, DJ Snake |      99 | ... |
+|        3 | Sunflower - Spider-Man: Into the Spider-Verse | Post Malone, Swae Lee     |      98 | ... |
+|        4 | Somebody That I Used to Know                  | Gotye, Kimbra             |      97 | ... |
+|        5 | Rolling in the Deep                           | Adele                     |      96 | ... |
+|      ... | ...                                           | ...                       |     ... | ... |
+|          |                                               |                           |         |     |
+
+ Because it's a CSV file, column delimiters are written with a ~,~ symbol. Each line in the text file represents one song.
+
+ #+BEGIN_SRC CSV
+ Position,"Track Name",Artist,Streams,URL
+ #+END_SRC
 
 ****  *Who appears on the top streamed list?*
 
  First, the exec wants to know which artists appears on the list and how many times they appear. Prepare an output file with contents of your nested array so that the record label executive can see this report.
 
-- Data Extract 1 to be linked
-- Data Extract 2 to be linked
+****** Link to Data Extract 1
+****** Link to Data Extract 2
 
 Not knowing data structures yet, it seems the way to proceed quickly at building is with Java arrays. Read in the text file and then save the ~CSV~ file format into a nested Java array like ~myList~ below. If an artist appears multiple times, then that artist probably should only appear once in your nested array.
 
@@ -196,7 +222,8 @@ Not knowing data structures yet, it seems the way to proceed quickly at building
 
 Will you limit to just the artist name? Perhaps you should discuss your decision with your class colleagues.
 
-**** *Can we get a sorted order of artist names?*
+
+**** *Who are the music artists (in alphabetical order)?*
 
 It just so happens that this imaginary VIP client has a thing for alphabetized lists and wants to see the artist names in alphabetical order. Since you learned about linked lists in class, you should know how to create one.
 
@@ -245,28 +272,78 @@ Please fill out this _form_ (link not yet available)
 
 What you should submit is a link to where your code repository is located. Your code repository should have the elements described in the project template section. It should also match the items asked for in parts 1 and 2 above.
 
+Specifically:
+
+****** TODO How did you organize your files?
+****** TODO Who appears on the top streamed list?
+****** TODO Who are the music artists (in alphabetical order)?
+
 
 ** [A2] Music playlist
+:PROPERTIES:
+:CUSTOM_ID: a2
+:FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLScU0yfFiwgAtiFT-XxJt4U-lbaDRA9sW_PT78tvfopk-VFjIw/viewform
+:END:
 
-Section left blank for now
+*** Problem Description:
+
+Your VIP client wants to listen to the music tracks in this week's latest song list to review them and get a sense for what they sound like. This time your client wants you to process all the full weeks of this quarter that have already passed so you're given multiple CSV files of the same format.
+
+Your client also says they want to listen to songs based on song/track titles in ascending order. It /must/ be in this order.
+
+**** Can you read from multiple input files?
+
+**** Can you build a playlist?
+
+The first You'll have to read multiple files and build a queue of these songs.
+
+In class not too long ago we went over the kinds of linked list design patterns available. Some of these are conducive to inserting items to the end and removing from the front.
+
+
+
+
+****  Can you track what was recently listened to?
+
+
+
+
+*** Where to Submit:
+
+Please fill out this _form_ (link not yet available)
+
+What you should submit is a link to where your code repository is located. Your code repository should have the elements described in the project template section. It should also match the items asked for in parts 1 and 2 above.
+
+****** TODO How did you organize your files?
+****** TODO How did you build your playlist?
+****** TODO How did you track the recently listened to tracks?
+
 
 ** [A3]
-
+:PROPERTIES:
+:CUSTOM_ID: a3
+:FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLSeyj09ooNGF5AUag9oYMBr170XqlCuvAldypqU_EkI1ceVdUQ/viewform
+:END:
 Section left blank for now
 
 ** [A4]
-
+:PROPERTIES:
+:CUSTOM_ID: a4
+:FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLSecWRBZvBIQVuHnCphMN4hA5NDTyYz54QxXcv9HFWG1d44Yrw/viewform
+:END:
 Section left blank for now
 
 ** [A5]
-
+:PROPERTIES:
+:CUSTOM_ID: a5
+:FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLSeQjRDbv5OSdQ5r9lhcbLnOX_MXHkqW014wy3K2ibKF0INjOg/viewform
+:END:
 Section left blank for now
 
 * Footnotes
 
 [fn:1] I am unfamiliar with most IDEs and will. More than likely not be a good resource for helping you through IDE issues. Please find a class colleague to help you.
 [fn:2] Git is an open source version control system. Some information summarized on the [[https://libguides.brooklyn.cuny.edu/c.php?g=986722&p=7152056][OER course page]]
-
+[fn:3] This list comes from [[https://newsroom.spotify.com/2019-12-03/the-top-songs-artists-playlists-and-%20podcasts-of-2019-and-the-last-decade/][The Top Songs, Artists, Playlists, and Podcasts of 2019—and the Last Decade]] (accessed 2020-01-16)
 
 #+HTML:<div>
 Last updated by {{{time(%Y-%m-%d %H:%M:%S)}}} {{{author}}} ({{{email}}})
