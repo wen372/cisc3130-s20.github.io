@@ -1,4 +1,5 @@
 #+TITLE:     CISC 3130 Assignments
+#+SUBTITLE:  Department of Computer & Information Science, Brooklyn College
 #+AUTHOR:    Katherine Chuang
 #+EMAIL:     chuang@sci.brooklyn.cuny.edu
 #+UNIVERSITY: Brooklyn College
@@ -15,11 +16,17 @@
 #+HTML_HEAD: <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
 #+HTML_HEAD: <link href="spec-style.css" rel="stylesheet" type="text/css" />
 
+#+HTML:
+#+HTML: <div class="outline-2" id="meta" style="font-size:12px">
+*Author:* {{{author}}} ({{{email}}}) \\
+*Last updated:* {{{time(%Y-%m-%d %H:%M:%S)}}}
+#+HTML: </div>
+
 * Tentative Due Dates
 
 This section to summarize the links to submit assignments.
 
-#+HTML: <div style="width:600px;text-align:left;">
+#+HTML: <div style="width:550px;text-align:left;">
 | *Assignment* | Due Date  | Link |
 |--------------+-----------+------|
 | =[A1]=       | 2/20/2020 |      |
@@ -160,7 +167,7 @@ There is a GitHub organization for this semester named *~CISC3130-s20~*.
 
 Descriptions for each assignment is given below.
 
-** Top Streaming Music Artists
+** [A1] Top Streaming Music Artists
 
 A record label executive received text files that contain the top streamed music artists on Spotify for certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times.
 
@@ -239,6 +246,21 @@ Please fill out this _form_ (link not yet available)
 What you should submit is a link to where your code repository is located. Your code repository should have the elements described in the project template section. It should also match the items asked for in parts 1 and 2 above.
 
 
+** [A2] Music playlist
+
+Section left blank for now
+
+** [A3]
+
+Section left blank for now
+
+** [A4]
+
+Section left blank for now
+
+** [A5]
+
+Section left blank for now
 
 * Footnotes
 
