@@ -12,10 +12,13 @@
 #+TODO: MISSING(nil) OPTIONAL(o) | UPDATED(u)
 #+OPTIONS:   H:3 num:n toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+TOC: listings
+#+TOC: tables
 #+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:https://orgmode.org/org-info.js
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+HTML_HEAD: <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
+#+EXPORT_FILE_NAME: ../assignments/index.html
+#+HTML_HEAD: <link href="http://fonts.googleapis.com/css?family=Quicksand:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
 #+HTML_HEAD: <link href="spec-style.css" rel="stylesheet" type="text/css" />
 
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: Neo-Euler
@@ -23,22 +26,26 @@
 
 #+HTML:
 #+HTML: <div class="outline-2" id="meta" style="font-size:12px">
-*Author:* {{{author}}} ({{{email}}}) \\
-*Last updated:* {{{time(%Y-%m-%d %H:%M:%S)}}}
+*Author:* {{{author}}} ({{{email}}})\\
+/This is part of the OER resource released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License./
 #+HTML: </div>
 
-* Assignment Due Dates
 
-This section to summarize the links to submit assignments.
+* Assignment Due Dates
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+This section to summarize the links for submitting assignments. Each of the google form creates a spreadsheet, that makes it helpful for me to review each submission.
 
 #+HTML: <div style="width:550px;text-align:left;">
-| *Assignment*                                | Due Date  | Link |
-|---------------------------------------------+-----------+------|
-| =[A1]= [[#a1][Top Streaming Music Artists]] | 2/20/2020 |      |
-| =[A2]= [[#a2][Music Playlist]]              | 3/5/2020  |      |
-| =[A3]= [[#a3][Assignment 3]]                | 3/19/2020 |      |
-| =[A4]= [[#a4][Assignment 4]]                | 4/2/2020  |      |
-| =[A5]= [[#a5][Assignment 5]]                | 4/30/2020 |      |
+| *Assignment*                       | Due Date  | Link |
+|------------------------------------+-----------+------|
+| =[A1]= [[#a1][Top Streaming Music Artists]] | 2/20/2020 | Form |
+| =[A2]= [[#a2][Music Playlist]]              | 3/5/2020  | Form |
+| =[A3]= [[#a3][Assignment 3]]                | 3/19/2020 | Form |
+| =[A4]= [[#a4][Assignment 4]]                | 4/2/2020  | Form |
+| =[A5]= [[#a5][Assignment 5]]                | 4/30/2020 | Form |
+|                                    |           |      |
 #+HTML: </div>
 
 * Objective
@@ -144,6 +151,14 @@ Some of you may be more comfortable with what the assignments are asking. Some m
 - You're welcome to explore practicing with other programming languages and submit with other languages. You will get credit for work in another language so long as your submission includes a write up explaining why you chose that language over languages. "I don't like programming in the Object Oriented Paradigm" is perfectly fine, if you can give more reasons comparing advantages and disadvantages of features that would be better. Length should be what could constitute as "a long email".
 
 
+** Asking for help
+:PROPERTIES:
+:CUSTOM_ID: help
+:END:
+
+In previous courses, students have found it helpful to form study groups to discuss the requirements and their solutions with each other. Please feel free to organize a study group.
+
+If anything is unclear please write an email explaining what is confusing you. Writing more detail with what you're struggling with helps, please include a minimal working example (MWE) where relevant to do so.
 
 * Project template
 
@@ -169,14 +184,16 @@ There is a GitHub organization for this semester named *~CISC3130-s20~*.
 * The Tasks
 
 Descriptions for each assignment is given below.
+#+TOC: headlines 1 local
 
 ** [A1] Top Streaming Artists
 :PROPERTIES:
+:UNNUMBERED: notoc
 :CUSTOM_ID: a1
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLScoTdzWI9jpKVkvAejzHfDfUoDf1rFd931S-ei2puA6zZbBzg/viewform
 :END:
 
-*** Problem Description:
+*** Problem Description
 A record label executive received text files that contain the top streamed music artists during certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times. The data comes from [[https://spotifycharts.com/][Spotify Charts]].
 
 In order for their in house IT to be able to process the information, they need someone to help process it.
@@ -233,16 +250,17 @@ You may use the example classes below to start with to design a sorted list of ~
 
  #+NAME: TopHits
  #+BEGIN_SRC java
-
+/* A node represents an artist */
  class Artist {
     private String name;
     private Artist next;
    // add constructors
  }
 
+/* The List TopStreamingArtists is composed of a series of artist names */
  class TopStreamingArtists {
     private Artist first;
-    public void TopHits(){
+    public void TopStreamingArtists(){
       first = null;
     }
     public boolean isEmpty(){
@@ -266,7 +284,7 @@ Make sure to print out the report for the exec showing the data in ascending ord
 
 
 
-*** Where to Submit:
+*** Where to Submit
 
 Please fill out this _form_ (link not yet available)
 
@@ -281,6 +299,7 @@ Specifically:
 
 ** [A2] Music playlist
 :PROPERTIES:
+:UNNUMBERED: notoc
 :CUSTOM_ID: a2
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLScU0yfFiwgAtiFT-XxJt4U-lbaDRA9sW_PT78tvfopk-VFjIw/viewform
 :END:
@@ -291,19 +310,93 @@ Your VIP client wants to listen to the music tracks in this week's latest song l
 
 Your client also says they want to listen to songs based on song/track titles in ascending order. It /must/ be in this order.
 
-**** Can you read from multiple input files?
+**** *Can you read from multiple input files?*
 
-**** Can you build a playlist?
+Instead of reading just one file at a time, process multiple files. It might help to store the file names in a data structure where ~myFiles = [week1, week2, week3, weekn]~ to make it easier to manage, or perhaps you want to make it possible to read any number of files in a directory.
 
-The first You'll have to read multiple files and build a queue of these songs.
+Below is an example of how could try to start the organization of code.
 
-In class not too long ago we went over the kinds of linked list design patterns available. Some of these are conducive to inserting items to the end and removing from the front.
+#+BEGIN_SRC java
+/* Storing one week of data in a queue */
+public MyQueue extends LinkedList {
+  // constructor creates a linked list that stores songs from one text file
+  public MyQueue(String filename){
+    // take the filename, open it and convert to queue
+  }
+}
+
+/* An example for working with multiple text files */
+public class MyApp {
+  // The files you'll be reading stored in a data structure to make it iterable
+  myFiles = [week1, week2, week3, weekn];
+
+  ArrayList<WeekQueue> allTheWeeks = new ArrayList<>();
+
+  for (int i=0; i < myFiles.length-1; i++){
+    MyQueue dataExtract = new MyQueue(myFiles[i]);
+    allTheWeeks.add(dataExtract);
+  }
+}
+#+END_SRC
 
 
 
+**** *Can you build a playlist?*
 
-****  Can you track what was recently listened to?
+In class not too long ago we went over the design of various types of linked list design patterns available. Some of these linked lists are conducive to inserting items to one end and removing from the other end.
 
+#+BEGIN_SRC java
+/* The Playlist implementation */
+
+class Song {
+  private String track;
+  private Song next;
+  // add constructors
+}
+public class Playlist {
+  private Song first;
+  public void Playlist(){
+    // constructor for creating a new list
+  }
+  public void addSong(Song s){
+
+  }
+  public Song listenToSong(){
+    // retrieves the next song to listen to
+  }
+}
+#+END_SRC
+
+Once you read in multiple files, you'll likely have sorted lists. Try to merge these multiple arrays together into one single sorted queue. Below is an example of merging 2 sorted lists into one.
+
+#+BEGIN_SRC java
+/* This function takes two queues and returns one into one */
+public MyQueue mergingFunction(MyQueue q1, MyQueue q2){
+
+}
+#+END_SRC
+
+
+****  *Can you track what was recently listened to?*
+
+As a song is removed from the song playlist, it should go to the data structure tracking the listing history. In class we learned about the stack data structure that can let you easily access the most recently inserted item.
+
+#+BEGIN_SRC java
+/* The SongHistoryList implementation */
+
+public class SongHistoryList {
+  private Song first;
+  public void SongHistoryList(){
+    // constructor for creating a new list
+  }
+  public void addSong(Song s){
+
+  }
+  public Song lastListened(){
+    // retrieves the next song to listen to
+  }
+}
+#+END_SRC
 
 
 
@@ -315,25 +408,26 @@ What you should submit is a link to where your code repository is located. Your 
 
 ****** TODO How did you organize your files?
 ****** TODO How did you build your playlist?
-****** TODO How did you track the recently listened to tracks?
-
-
-** [A3]
+****** TODO How did you track the recently listened to tracks
+** [A3]  Assignment 3
 :PROPERTIES:
+:UNNUMBERED: notoc
 :CUSTOM_ID: a3
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLSeyj09ooNGF5AUag9oYMBr170XqlCuvAldypqU_EkI1ceVdUQ/viewform
 :END:
 Section left blank for now
 
-** [A4]
+** [A4] Assignment 4
 :PROPERTIES:
+:UNNUMBERED: notoc
 :CUSTOM_ID: a4
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLSecWRBZvBIQVuHnCphMN4hA5NDTyYz54QxXcv9HFWG1d44Yrw/viewform
 :END:
 Section left blank for now
 
-** [A5]
+** [A5] Assignment 5
 :PROPERTIES:
+:UNNUMBERED: notoc
 :CUSTOM_ID: a5
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLSeQjRDbv5OSdQ5r9lhcbLnOX_MXHkqW014wy3K2ibKF0INjOg/viewform
 :END:
@@ -341,10 +435,6 @@ Section left blank for now
 
 * Footnotes
 
-[fn:1] I am unfamiliar with most IDEs and will. More than likely not be a good resource for helping you through IDE issues. Please find a class colleague to help you.
+[fn:1] I am unfamiliar with most of the IDEs in vogue today and therefore unlikely to be a good resource for helping you through IDE issues. Please find a class colleague to help you.
 [fn:2] Git is an open source version control system. Some information summarized on the [[https://libguides.brooklyn.cuny.edu/c.php?g=986722&p=7152056][OER course page]]
 [fn:3] This list comes from [[https://newsroom.spotify.com/2019-12-03/the-top-songs-artists-playlists-and-%20podcasts-of-2019-and-the-last-decade/][The Top Songs, Artists, Playlists, and Podcasts of 2019—and the Last Decade]] (accessed 2020-01-16)
-
-#+HTML:<div>
-Last updated by {{{time(%Y-%m-%d %H:%M:%S)}}} {{{author}}} ({{{email}}})
-#+HTML:</div>

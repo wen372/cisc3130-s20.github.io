@@ -1,6 +1,11 @@
+/* modified version of  https://github.com/thi-ng/org-spec
+ * demo: https://demo.thi.ng/org-spec/
+ * modified by Katherine Chuang @katychuang on github
+ */
+
 body {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     color: #33333f;
 }
@@ -16,22 +21,22 @@ p>code, li>code {
 }
 
 h1, h2, h3 {
-    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-family: "Quicksand", Helvetica, Arial, sans-serif;
 }
 
 h2 {
     border-bottom: 1px solid #f0c;
     padding-bottom: 0.5em;
-    font-size: 1.75em;
+    font-size: 1.5em;
 }
 
 h3 {
     margin-top: 2em;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 h4 {
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 h5 {
@@ -89,9 +94,9 @@ a[href^="http"]:after {
     margin-top: 2em;
 }
 
-#table-of-contents a:link,
+#table-of-contents a:link,hh
 #table-of-contents a:visited {
-    color: black;
+    color: #606060;
     background: transparent;
 }
 
@@ -99,6 +104,9 @@ a[href^="http"]:after {
     line-height: 1.2;
 }
 #table-of-contents h2 {
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
     border-bottom: 0;
 }
 
@@ -363,6 +371,8 @@ div.figure {
     }
 
     #table-of-contents {
+        font-family: Quicksand, sans-serif;
+        color: #606060;
         position: fixed;
         top: 0;
         left: 0;
@@ -370,7 +380,7 @@ div.figure {
         width: 240px;
         height: 100vh;
         font-size: 13px;
-        background: #eee;
+        background: #F2F2F2;
         overflow: auto;
     }
 
@@ -442,4 +452,13 @@ div.figure {
     div.notice:before {
         display: none;
     }
+}
+
+#postamble{
+    /*z-index: 0;*/
+    float:right;
+    font-size: 0.8em;
+}
+#postamble .validation{
+    display:none;
 }
