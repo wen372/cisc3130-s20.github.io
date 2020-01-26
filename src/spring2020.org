@@ -1,4 +1,4 @@
-#+TITLE:     CISC 3130 Assignments
+#+TITLE:     Assignments | CISC 3130 Data Structures
 #+SUBTITLE:  Department of Computer & Information Science, Brooklyn College
 #+AUTHOR:    Katherine Chuang
 #+EMAIL:     chuang@sci.brooklyn.cuny.edu
@@ -26,7 +26,9 @@
 
 #+HTML:
 #+HTML: <div class="outline-2" id="meta" style="font-size:12px">
-*Author:* {{{author}}} ({{{email}}})\\
+*Course Page:* [[https://libguides.brooklyn.cuny.edum/cisc3130]]\\
+*Semester*: Spring 2020\\
+*Professor:* {{{author}}} ({{{email}}})\\
 /This is part of the OER resource released under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License./
 #+HTML: </div>
 
@@ -35,7 +37,7 @@
 :PROPERTIES:
 :UNNUMBERED: notoc
 :END:
-This section to summarize the links for submitting assignments. Each of the google form creates a spreadsheet, that makes it helpful for me to review each submission.
+This section to summarize the links for submitting assignments.
 
 #+HTML: <div style="width:550px;text-align:left;">
 | *Assignment*                       | Due Date  | Link |
@@ -45,8 +47,13 @@ This section to summarize the links for submitting assignments. Each of the goog
 | =[A3]= [[#a3][Assignment 3]]                | 3/19/2020 | Form |
 | =[A4]= [[#a4][Assignment 4]]                | 4/2/2020  | Form |
 | =[A5]= [[#a5][Assignment 5]]                | 4/30/2020 | Form |
-|                                    |           |      |
+
 #+HTML: </div>
+
+\\
+Each of the google forms linked above creates a spreadsheet, which I use as my checklist to review the work submitted. I will not be checking my email for assignment submissions and due to technical difficulties with my browser, will not be downloading attachments for submissions.
+
+Please avoid submitting the following types of files: ~.class~, ~.jar~, ~.zip~
 
 * Objective
 
@@ -118,6 +125,8 @@ As you code, it helps to be conscious and actively engaged in the activity. Prog
 
 Great code is succinct, expressive, and clear the first time you read it. It tries to guide the reader through transitional steps. It aims for functions with a single main idea. Great code is clean, maintainable code.
 
+It's uncommon to write the best looking code on the first try, especially while you're still in school learning. It can take several iterations of refactoring to get code to the most elegant form. It's encouraged that you try to develop an intuitive sense for what great code looks like so you know where to improve.
+
 ** Following spec
 
 When you submit your assignment, check carefully the description and the items that should be submitted, and exact formatting of such. These are the /specifications/ for the assignment, and for the rest of the document referred to as "spec". Please be kind to your future self by treating these take home assignments with the same rigor as you would with future employment, in order to practice the skill of adhering to spec.
@@ -160,6 +169,8 @@ In previous courses, students have found it helpful to form study groups to disc
 
 If anything is unclear please write an email explaining what is confusing you. Writing more detail with what you're struggling with helps, please include a minimal working example (MWE) where relevant to do so.
 
+Office hours are available for students who need further clarification of concepts presented in lecture, or have made solid attempts on the homework assignments or other practice problems and require further assistance understanding how to approach such problems.
+
 * Project template
 
 When there are multiple waves of similar work to be done for multiple projects, a developer might prepare a standard example of a "core" set of files to reference or reuse. Since the project assignments all require reading in an input text file, I've prepared an example that could potentially be used.
@@ -177,7 +188,7 @@ The prepared code repository aims to show a reasonably good sample, with meeting
 
 ** Where to find it
 
-The link to the repository is: https://github.com/cisc3130-s20/assignment-template
+The link to this template repository is: https://github.com/cisc3130-s20/assignment-template
 
 There is a GitHub organization for this semester named *~CISC3130-s20~*.
 
@@ -192,6 +203,14 @@ Descriptions for each assignment is given below.
 :CUSTOM_ID: a1
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLScoTdzWI9jpKVkvAejzHfDfUoDf1rFd931S-ei2puA6zZbBzg/viewform
 :END:
+
+*** Learning Objectives
+
+- Review prerequisite Java programming knowledge by putting together a small project
+- Review the of the Java [[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html][array]] type, scaling to 2D arrays
+- Review of Java OOP concepts with creating classes, and instantiating them
+- Create custom linked list class with appropriate members and methods
+- Compare the operations for working with the array type and linked list
 
 *** Problem Description
 A record label executive received text files that contain the top streamed music artists during certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times. The data comes from [[https://spotifycharts.com/][Spotify Charts]].
@@ -304,7 +323,15 @@ Specifically:
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLScU0yfFiwgAtiFT-XxJt4U-lbaDRA9sW_PT78tvfopk-VFjIw/viewform
 :END:
 
-*** Problem Description:
+
+*** Learning Objectives
+
+- Practice working with multiple input files
+- Review the creation of linked list class
+- Create custom Stack and Queue ADTs to use
+- Perform operations with the custom defined ADTs to see the advantages and disadvantages of each
+
+*** Problem Description
 
 Your VIP client wants to listen to the music tracks in this week's latest song list to review them and get a sense for what they sound like. This time your client wants you to process all the full weeks of this quarter that have already passed so you're given multiple CSV files of the same format.
 
@@ -400,7 +427,7 @@ public class SongHistoryList {
 
 
 
-*** Where to Submit:
+*** Where to Submit
 
 Please fill out this _form_ (link not yet available)
 
@@ -416,6 +443,15 @@ What you should submit is a link to where your code repository is located. Your 
 :FORM_URL: https://docs.google.com/forms/d/e/1FAIpQLSeyj09ooNGF5AUag9oYMBr170XqlCuvAldypqU_EkI1ceVdUQ/viewform
 :END:
 Section left blank for now
+
+*** Learning Objectives
+
+-
+-
+
+*** Problem Description
+
+
 
 ** [A4] Assignment 4
 :PROPERTIES:
