@@ -42,8 +42,8 @@ This section to summarize the links for submitting assignments.
 #+HTML: <div style="width:550px;text-align:left;">
 | *Assignment*                       | Due Date  | Link |
 |------------------------------------+-----------+------|
-| =[A1]= [[#a1][Top Streaming Music Artists]] | 2/20/2020 | Form |
-| =[A2]= [[#a2][Music Playlist]]              | 3/5/2020  | Form |
+| =[A1]= [[#a1][Top Streaming Music Artists]] | 2/20/2020 | [[https://docs.google.com/forms/d/e/1FAIpQLScoTdzWI9jpKVkvAejzHfDfUoDf1rFd931S-ei2puA6zZbBzg/viewform][Form]] |
+| =[A2]= [[#a2][Music Playlist]]              | 3/5/2020  | [[https://docs.google.com/forms/d/e/1FAIpQLScU0yfFiwgAtiFT-XxJt4U-lbaDRA9sW_PT78tvfopk-VFjIw/viewform][Form]] |
 | =[A3]= [[#a3][Assignment 3]]                | 3/19/2020 | Form |
 | =[A4]= [[#a4][Assignment 4]]                | 4/2/2020  | Form |
 | =[A5]= [[#a5][Assignment 5]]                | 4/30/2020 | Form |
@@ -55,9 +55,11 @@ Each of the google forms linked above creates a spreadsheet, which I use as my c
 
 Please avoid submitting the following types of files: ~.class~, ~.jar~, ~.zip~
 
+These 5 assignments make up 20% of your final grade. For more on the grading scheme, please read section 1.3 Grading Rubric.
+
 * Objective
 
-Take home assignments are opportunities to enhance the concepts and theories we cover in class in a more tangible way. You would find the most value of these assignments if you treat them with the seriousness as if you were employed but a VIP client, albeit with obscure and outdated data processing needs.
+Take home assignments are opportunities to enhance the concepts and theories we cover in class in a more tangible way. You would find the most value of these assignments if you treat them with the seriousness as if you were employed by a VIP client, albeit with obscure and outdated data processing needs.
 
 Assignments are structured as if you were hired on as a developer in training.
 
@@ -89,15 +91,17 @@ Each of the assignments can be completed within an afternoon by an experienced p
 
 ** Grading Rubric
 
-The assignments will be graded on a scale of /strong effort/ and /weak effort/. Late assignments means submitting any time after the specified due date, and will limited to score of one regardless of the level of effort. Not turning in on time will be given a score of zero. Late assignments will be accepted until the close of business on 4/30/2020 All assignments combined are 20% of your final grade.
+These assignments are designed with the idea that a seasoned, full-time programmer can finish in an afternoon of about 2-4 hours. In translating to an undergraduate curriculum where the student is learning the material, approximately 2 weeks is given in between due dates to allow substantial time to complete the assignments. Thus, late assignments are frowned upon. Late assignments means submitting any time after the specified due date, and will limited to score of one regardless of the level of effort. Not turning in on time will be given a score of zero. Late assignments will be accepted until the close of business on 4/30/2020. /All assignments combined are 20% of your final grade./
 
-Weak effort looks like someone who rushed to get the work done. For example,
+The assignments will be graded *on a scale of /strong effort/ and /weak effort/*.
+
+/Weak effort/ looks like someone who rushed to get the work done. For example,
 
 - Met most of specs but didn't check carefully over their work.
 - Noticeable amount of typos, and grammar mistakes.
 - Hard to read code, which might be a result of messy code or lacking comments to make it more readable.
 
-Strong effort exhibits work that surpasses weak effort, such as:
+/Strong effort/ exhibits work that surpasses weak effort, such as:
 
 - Neatly presented, tidy code base and well documented code (maintainable code)
 - Relatively easy to tell what was being done and how (documented code)
@@ -213,7 +217,7 @@ Descriptions for each assignment is given below.
 - Compare the operations for working with the array type and linked list
 
 *** Problem Description
-A record label executive received text files that contain the top streamed music artists during certain weeks. Each file represents one track by an artist. An artist's name might appear multiple times. The data comes from [[https://spotifycharts.com/][Spotify Charts]].
+A record label executive received text files that contain the top streamed music artists during certain weeks. Each file represents one track by an artist. One track means one song. An artist's name might appear multiple times. The data comes from [[https://spotifycharts.com/][Spotify Charts]].
 
 In order for their in house IT to be able to process the information, they need someone to help process it.
 
@@ -237,10 +241,11 @@ Each text file is a comma separated value (CSV) file that has a few columns like
 
 ****  *Who appears on the top streamed list?*
 
- First, the exec wants to know which artists appears on the list and how many times they appear. Prepare an output file with contents of your nested array so that the record label executive can see this report.
+ First, the exec wants to know which artists appears on the list and how many times they appear. Prepare an output file with contents of your nested array so that the record label executive can see this report. /Note on data links: These links are provided merely for quick access to data files. You may choose to download any date or country from Spotify Charts of interest. Best practice with any type of data work is to provide a note on whichever data you select and rationale for doing so./
 
-****** Link to Data Extract 1
-****** Link to Data Extract 2
+- [[../data/regional-global-weekly-2020-01-17--2020-01-24.csv][Link to Data Extract 1]]: Week ending Jan 23, 2020 (Global)
+- [[../data/regional-us-weekly-2020-01-17--2020-01-24.csv][Link to Data Extract 2]]: Week ending Jan 23, 2020 (US)
+
 
 Not knowing data structures yet, it seems the way to proceed quickly at building is with Java arrays. Read in the text file and then save the ~CSV~ file format into a nested Java array like ~myList~ below. If an artist appears multiple times, then that artist probably should only appear once in your nested array.
 
